@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubrí artistas musicales, sus géneros, biografías y enlaces oficiales.">
+  <title>MusicHub — Descubrí tu próxima canción</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="MusicHub inicio"><span class="brand-mark">♪</span> Music<span>Hub</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#artistas">Artistas</a>
+      <a href="#generos">Géneros</a>
+      <a href="#sobre">Sobre el proyecto</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TU PRÓXIMO DESCUBRIMIENTO EMPIEZA ACÁ</p>
+        <h1>La música que te mueve, <span>en un solo lugar.</span></h1>
+        <p class="hero-text">Explorá artistas, conocé sus historias y encontrá sus perfiles oficiales para seguir escuchando.</p>
+        <a class="primary-button" href="#artistas">Explorar artistas <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="disc disc-one"></div><div class="disc disc-two"></div>
+        <div class="hero-note">♫</div>
+        <div class="floating-label">SONÁ A TU MANERA</div>
+      </div>
+    </section>
+
+    <section class="catalog section" id="artistas">
+      <div class="section-heading">
+        <div><p class="eyebrow">ENCONTRÁ TU SONIDO</p><h2>Artistas destacados</h2></div>
+        <span id="resultCount" class="result-count">6 artistas</span>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar artista, país o género..." autocomplete="off"></label>
+        <select id="genreFilter" aria-label="Filtrar por género">
+          <option value="">Todos los géneros</option>
+          <option>Pop</option><option>Trap</option><option>Reggaetón</option><option>Rock</option><option>Electropop</option>
+        </select>
+      </div>
+      <div class="artist-grid" id="artistGrid" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>No encontramos artistas con esa búsqueda. Probá con otro nombre o género.</p>
+    </section>
+
+    <section class="genres section" id="generos">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORÁ POR ESTILO</p><h2>¿Qué querés escuchar?</h2></div></div>
+      <div class="genre-pills">
+        <button data-genre="Pop">Pop <span>↗</span></button>
+        <button data-genre="Trap">Trap <span>↗</span></button>
+        <button data-genre="Reggaetón">Reggaetón <span>↗</span></button>
+        <button data-genre="Rock">Rock <span>↗</span></button>
+        <button data-genre="Electropop">Electropop <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="about-icon">♫</div>
+      <div><p class="eyebrow">SOBRE MUSICHUB</p><h2>Descubrí artistas.<br>Conectá con su música.</h2></div>
+      <p>MusicHub es un catálogo musical de demostración para explorar artistas y acceder a sus plataformas oficiales. Los enlaces externos se abren en una nueva pestaña.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">♪</span> Music<span>Hub</span></a><p>Un proyecto web hecho con HTML, CSS y JavaScript.</p><span>© <span id="year"></span> MusicHub</span></footer>
+
+  <dialog id="artistDialog" class="artist-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Cerrar">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
