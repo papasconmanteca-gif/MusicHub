@@ -1,84 +1,117 @@
 body {
-    background-color: #eeeeff;
-    font-family: Arial, sans-serif;
     margin: 0;
-    color: #222222;
+    font-family: Arial, sans-serif;
+    background-color: #f4f1ff;
+    color: #29243b;
 }
-
 header {
-    background-color: darkblue;
+    background-color: #30236f;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 30px 15px;
 }
-
 header h1 {
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 36px;
 }
-
+header p {
+    margin: 8px 0;
+}
 nav {
-    background-color: #d5d5f5;
+    background-color: #e4dcff;
     text-align: center;
-    padding: 12px;
+    padding: 15px;
 }
-
 nav a {
-    color: darkblue;
-    margin: 0 12px;
+    color: #30236f;
     text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
 }
-
 nav a:hover {
+    color: #a02c91;
     text-decoration: underline;
 }
-
 main {
-    margin: 25px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
 }
-
 section {
     margin-bottom: 35px;
 }
-
 h2 {
-    color: purple;
-    border-bottom: 1px solid purple;
-    padding-bottom: 5px;
+    color: #49328c;
+    border-bottom: 2px solid #c9b9ff;
+    padding-bottom: 8px;
 }
-
+.contenedor-artistas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
 .artista {
     background-color: white;
-    border: 1px solid #ccccdd;
-    padding: 15px;
-    margin-bottom: 15px;
+    border: 1px solid #ded5fa;
+    border-radius: 10px;
+    padding: 18px;
+    width: calc(33.333% - 46px);
+    box-shadow: 0 3px 8px #ddd7ee;
 }
-
 .artista h3 {
-    color: darkblue;
+    color: #8b278b;
+    margin-top: 0;
+    font-size: 22px;
 }
-
-a {
-    color: green;
+.artista p {
+    line-height: 1.5;
 }
-
+.artista a {
+    color: #24683b;
+    font-weight: bold;
+    text-decoration: none;
+}
+.artista a:hover {
+    text-decoration: underline;
+}
+.generos {
+    background-color: #e9e2ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.sobre {
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid #8b68d6;
+    border-radius: 6px;
+}
 footer {
-    background-color: darkblue;
+    background-color: #30236f;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
 }
-
 footer a {
-    color: white;
+    color: #e4dcff;
+    text-decoration: none;
 }
-
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    .artista {
+        width: calc(50% - 46px);
+    }
+}
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
     nav a {
         display: inline-block;
-        margin: 5px;
+        margin: 6px;
     }
-
-    main {
-        margin: 15px;
+    .artista {
+        width: 100%;
     }
 }
