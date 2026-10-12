@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubrí artistas musicales, sus géneros, biografías y enlaces oficiales.">
-  <title>MusicHub — Descubrí tu próxima canción</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MusicHub - Mis artistas favoritos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#" aria-label="MusicHub inicio"><span class="brand-mark">♪</span> Music<span>Hub</span></a>
-    <nav aria-label="Navegación principal">
-      <a href="#artistas">Artistas</a>
-      <a href="#generos">Géneros</a>
-      <a href="#sobre">Sobre el proyecto</a>
+    <header id="inicio">
+        <h1>MusicHub</h1>
+        <p>Conocé artistas y encontrá su música.</p>
+    </header>
+
+    <nav>
+        <a href="#artistas">Artistas</a>
+        <a href="#generos">Géneros</a>
+        <a href="#sobre">Sobre el proyecto</a>
     </nav>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema">☾</button>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">TU PRÓXIMO DESCUBRIMIENTO EMPIEZA ACÁ</p>
-        <h1>La música que te mueve, <span>en un solo lugar.</span></h1>
-        <p class="hero-text">Explorá artistas, conocé sus historias y encontrá sus perfiles oficiales para seguir escuchando.</p>
-        <a class="primary-button" href="#artistas">Explorar artistas <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="disc disc-one"></div><div class="disc disc-two"></div>
-        <div class="hero-note">♫</div>
-        <div class="floating-label">SONÁ A TU MANERA</div>
-      </div>
-    </section>
+    <main>
+        <section id="artistas">
+            <h2>Artistas</h2>
+            <p>Estos son algunos artistas que elegí para esta página.</p>
 
-    <section class="catalog section" id="artistas">
-      <div class="section-heading">
-        <div><p class="eyebrow">ENCONTRÁ TU SONIDO</p><h2>Artistas destacados</h2></div>
-        <span id="resultCount" class="result-count">6 artistas</span>
-      </div>
-      <div class="toolbar">
-        <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Buscar artista, país o género..." autocomplete="off"></label>
-        <select id="genreFilter" aria-label="Filtrar por género">
-          <option value="">Todos los géneros</option>
-          <option>Pop</option><option>Trap</option><option>Reggaetón</option><option>Rock</option><option>Electropop</option>
-        </select>
-      </div>
-      <div class="artist-grid" id="artistGrid" aria-live="polite"></div>
-      <p class="empty-state" id="emptyState" hidden>No encontramos artistas con esa búsqueda. Probá con otro nombre o género.</p>
-    </section>
+            <div class="artista">
+                <h3>Duki</h3>
+                <p><strong>País:</strong> Argentina</p>
+                <p><strong>Género musical:</strong> Trap</p>
+                <a href="https://open.spotify.com/search/Duki" target="_blank" rel="noopener noreferrer">Escuchar a Duki en Spotify</a>
+            </div>
 
-    <section class="genres section" id="generos">
-      <div class="section-heading"><div><p class="eyebrow">EXPLORÁ POR ESTILO</p><h2>¿Qué querés escuchar?</h2></div></div>
-      <div class="genre-pills">
-        <button data-genre="Pop">Pop <span>↗</span></button>
-        <button data-genre="Trap">Trap <span>↗</span></button>
-        <button data-genre="Reggaetón">Reggaetón <span>↗</span></button>
-        <button data-genre="Rock">Rock <span>↗</span></button>
-        <button data-genre="Electropop">Electropop <span>↗</span></button>
-      </div>
-    </section>
+            <div class="artista">
+                <h3>Emilia</h3>
+                <p><strong>País:</strong> Argentina</p>
+                <p><strong>Género musical:</strong> Pop</p>
+                <a href="https://open.spotify.com/search/Emilia" target="_blank" rel="noopener noreferrer">Escuchar a Emilia en Spotify</a>
+            </div>
 
-    <section class="about section" id="sobre">
-      <div class="about-icon">♫</div>
-      <div><p class="eyebrow">SOBRE MUSICHUB</p><h2>Descubrí artistas.<br>Conectá con su música.</h2></div>
-      <p>MusicHub es un catálogo musical de demostración para explorar artistas y acceder a sus plataformas oficiales. Los enlaces externos se abren en una nueva pestaña.</p>
-    </section>
-  </main>
+            <div class="artista">
+                <h3>Bad Bunny</h3>
+                <p><strong>País:</strong> Puerto Rico</p>
+                <p><strong>Género musical:</strong> Reggaetón</p>
+                <a href="https://open.spotify.com/search/Bad%20Bunny" target="_blank" rel="noopener noreferrer">Escuchar a Bad Bunny en Spotify</a>
+            </div>
 
-  <footer><a class="brand" href="#"><span class="brand-mark">♪</span> Music<span>Hub</span></a><p>Un proyecto web hecho con HTML, CSS y JavaScript.</p><span>© <span id="year"></span> MusicHub</span></footer>
+            <div class="artista">
+                <h3>Taylor Swift</h3>
+                <p><strong>País:</strong> Estados Unidos</p>
+                <p><strong>Género musical:</strong> Pop</p>
+                <a href="https://open.spotify.com/search/Taylor%20Swift" target="_blank" rel="noopener noreferrer">Escuchar a Taylor Swift en Spotify</a>
+            </div>
+        </section>
 
-  <dialog id="artistDialog" class="artist-dialog">
-    <button class="dialog-close" id="dialogClose" aria-label="Cerrar">×</button>
-    <div id="dialogContent"></div>
-  </dialog>
-  <script src="script.js"></script>
+        <section id="generos">
+            <h2>Géneros musicales</h2>
+            <p>Algunos de los géneros que aparecen en la página son:</p>
+            <ul>
+                <li>Pop</li>
+                <li>Trap</li>
+                <li>Reggaetón</li>
+            </ul>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre el proyecto</h2>
+            <p>MusicHub es un proyecto escolar informativo sobre artistas musicales. Utilicé HTML para organizar el contenido y CSS para darle color y estilo a la página. Los enlaces permiten encontrar a los artistas en Spotify.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>MusicHub - Proyecto escolar</p>
+        <a href="#inicio">Volver al inicio</a>
+    </footer>
 </body>
 </html>
